@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditEvent">
+
+    <TextView
+        android:id="@+id/eventNameEdit"
+        android:layout_width="238dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginRight="73dp"
+        android:layout_marginBottom="43dp"
+        android:text="Event Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="28dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/hostNameEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/descEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Description"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/hostNameEdit"
+        app:layout_constraintStart_toEndOf="@+id/hostNameEdit"
+        app:layout_constraintTop_toBottomOf="@+id/hostNameEdit" />
+
+    <Button
+        android:id="@+id/viewAttendees"
+        android:layout_width="187dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="62dp"
+        android:text="View Attendees"
+        app:layout_constraintBottom_toTopOf="@+id/doneEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDate" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="times"
+        android:text="Choose Location"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/locationEdit"
+        app:layout_constraintStart_toStartOf="@+id/locationEdit"
+        app:layout_constraintTop_toBottomOf="@+id/descEdit" />
+
+    <EditText
+        android:id="@+id/editCapacity"
+        android:layout_width="208dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginRight="79dp"
+        android:layout_marginBottom="248dp"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Capacity"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/doneEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/capacityText"
+        app:layout_constraintTop_toTopOf="@+id/eventNameEdit"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/editDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="times"
+        android:text="Select event date"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewAttendees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeText"
+        app:layout_constraintTop_toBottomOf="@+id/timeHour" />
+
+    <TextView
+        android:id="@+id/timeText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="267dp"
+        android:text="Time: "
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/timeHour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationEdit" />
+
+    <EditText
+        android:id="@+id/timeHour"
+        android:layout_width="59dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="31dp"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Hour"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/editDate"
+        app:layout_constraintEnd_toStartOf="@+id/timeMin"
+        app:layout_constraintStart_toEndOf="@+id/timeText2"
+        app:layout_constraintTop_toBottomOf="@+id/capacityText" />
+
+    <EditText
+        android:id="@+id/timeMin"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="187dp"
+        android:layout_marginRight="187dp"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Min"
+        android:textSize="17dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/timeHour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeHour" />
+
+    <Spinner
+        android:id="@+id/locationEdit"
+        android:layout_width="198dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginBottom="58dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/timeText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/doneEdit"
+        android:layout_width="216dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:text="Save Changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewAttendees" />
+
+    <TextView
+        android:id="@+id/hostNameEdit"
+        android:layout_width="196dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:text="Host"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/descEdit"
+        app:layout_constraintEnd_toEndOf="@+id/descText"
+        app:layout_constraintStart_toEndOf="@+id/descText"
+        app:layout_constraintTop_toBottomOf="@+id/eventNameEdit" />
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:text="Description: "
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/descEdit"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/capacityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="29dp"
+        android:text="Capacity: "
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/timeHour"
+        app:layout_constraintEnd_toStartOf="@+id/editCapacity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationEdit" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginLeft="47dp"
+        android:text="Change date: "
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editDate"
+        app:layout_constraintEnd_toStartOf="@+id/editDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

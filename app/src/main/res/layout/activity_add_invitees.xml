@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddInvitees">
+
+    <TextView
+        android:id="@+id/addInviteeTitle"
+        android:layout_width="212dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="87dp"
+        android:layout_marginBottom="36dp"
+        android:text="Add Invitees"
+        android:textColor="@color/black"
+
+        android:fontFamily="times"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/inviteUserId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inviteUserId"
+        android:layout_width="237dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Enter User Id"
+        android:fontFamily="times"
+        android:inputType="textPersonName"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/addInvitees"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addInviteeTitle" />
+
+    <Button
+        android:id="@+id/addInvitees"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="291dp"
+        android:text="Add User"
+        android:fontFamily="times"
+        app:layout_constraintBottom_toTopOf="@+id/doneInvitees"
+        app:layout_constraintEnd_toEndOf="@+id/inviteUserId"
+        app:layout_constraintStart_toStartOf="@+id/inviteUserId"
+        app:layout_constraintTop_toBottomOf="@+id/inviteUserId" />
+
+    <Button
+        android:id="@+id/doneInvitees"
+        android:layout_width="193dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginLeft="98dp"
+        android:layout_marginBottom="57dp"
+        android:text="Create Event"
+        android:fontFamily="times"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addInvitees" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

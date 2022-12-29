@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CampusDiscovery</string>
+    <string name="title_activity_event_map">EventMap</string>
+</resources>

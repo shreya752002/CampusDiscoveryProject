@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/locationEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginBottom="13dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/eventDesc"
+        app:layout_constraintEnd_toEndOf="@+id/eventDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/eventCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:fontFamily="times"
+        android:hint="Event capacity"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/eventDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventTimemin" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:fontFamily="times"
+        android:text="Choose Location"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/locationEdit"
+        app:layout_constraintStart_toStartOf="@+id/eventID"
+        app:layout_constraintTop_toBottomOf="@+id/eventID" />
+
+    <EditText
+        android:id="@+id/eventDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:fontFamily="times"
+        android:hint="Event Description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eventTimemin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationEdit" />
+
+    <Switch
+        android:id="@+id/inviteOnly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="times"
+        android:text="Invite Only"
+        app:layout_constraintBottom_toTopOf="@+id/newEventButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventDate" />
+
+    <EditText
+        android:id="@+id/eventTimemin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginRight="146dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Time (MM)"
+        android:inputType="number"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/eventCapacity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eventTimehour"
+        app:layout_constraintTop_toBottomOf="@+id/eventDesc" />
+
+    <EditText
+        android:id="@+id/eventTimehour"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Time (HH)"
+        android:inputType="number"
+        android:textSize="12dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/eventTimemin"
+        app:layout_constraintEnd_toStartOf="@+id/eventTimemin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/eventDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="times"
+        android:text="Select event date"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/inviteOnly"
+        app:layout_constraintEnd_toEndOf="@+id/eventCapacity"
+        app:layout_constraintStart_toStartOf="@+id/inviteOnly"
+        app:layout_constraintTop_toBottomOf="@+id/eventCapacity" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="13dp"
+        android:fontFamily="times"
+        android:text="Create a new event"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/eventName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:ems="10"
+        android:fontFamily="times"
+        android:hint="Event Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eventID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/eventID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:fontFamily="times"
+        android:hint="Event ID"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/eventName"
+        app:layout_constraintTop_toBottomOf="@+id/eventName" />
+
+    <Button
+        android:id="@+id/newEventButton"
+        android:layout_width="247dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="times"
+        android:text="Create Event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inviteOnly" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

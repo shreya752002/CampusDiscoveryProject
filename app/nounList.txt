@@ -1,0 +1,13 @@
+Event Information:
+User
+Organization
+Eventname
+Transport
+Location
+
+People/Services used
+Database
+Contractor
+SGA
+Shareholder
+Campus tool developer
